@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '101/color_learn.dart';
-import '101/text_field_learn.dart';
+import '101/navigation_learn.dart';
 
 void main() {
   runApp(const MyApp()); //ALI DAYI
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-      home: const TextFieldLearn(),
+      home: const NavigationLearn(),
     );
   }
 }
