@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/theme/light_theme.dart';
 
-import '202/theme_learn_view.dart';
+import '202/form_learn_view.dart';
 
 void main() {
   runApp(const MyApp()); //ALI DAYI
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
       //       backgroundColor: Colors.transparent,
       //       elevation: 0,
       //     )),
-      home: const ThemeLarnView(),
+      home: const FormLearnView(),
     );
   }
 }
