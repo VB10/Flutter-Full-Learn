@@ -20,6 +20,10 @@ dependencies:
   shimmer: ^2.0.0
   dio: ^4.0.4
 
+  #Cache
+  shared_preferences: ^2.0.13
+  flutter_secure_storage: ^5.0.2
+
   #Google
   url_launcher: ^6.0.20
 
