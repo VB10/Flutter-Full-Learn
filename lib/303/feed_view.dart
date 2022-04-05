@@ -30,13 +30,14 @@ class _FeedViewState extends State<FeedView> with AutomaticKeepAliveClientMixin 
           setState(() {});
         },
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [ElevatedButton(onPressed: () {}, child: const Icon(Icons.ac_unit))],
+      ),
       body: _FeedFutureBuilder(itemsFuture: _itemsFuture),
     );
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }
 

@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/theme/light_theme.dart';
+import 'package:flutter_full_learn/product/global/resource_context.dart';
+import 'package:flutter_full_learn/product/global/theme_notifer.dart';
+import 'package:provider/provider.dart';
 
-import '303/tabbar_advance.dart';
+import '303/reqrest_resource/view/req_res_view.dart';
 
 void main() {
-  runApp(const MyApp()); //ALI DAYI
+  runApp(MultiProvider(
+    providers: [
+      Provider(create: (_) => ResourceContext()),
+      ChangeNotifierProvider<ThemeNotifer>(create: (context) => ThemeNotifer())
+    ],
+    builder: (context, child) => const MyApp(),
+  )); //ALI DAYI
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: LighTheme().theme,
+      theme: context.watch<ThemeNotifer>().currentTheme,
 
       //  ThemeData.dark().copyWith(
       //     tabBarTheme: const TabBarTheme(
@@ -45,7 +53,7 @@ class MyApp extends StatelessWidget {
       //       backgroundColor: Colors.transparent,
       //       elevation: 0,
       //     )),
-      home: const TabAdvanceLearn(),
+      home: const ReqResView(),
     );
   }
 }
