@@ -1,3 +1,5 @@
+import 'package:equatable/equatable.dart';
+
 class UserManagement<T extends AdminUser> {
   final T admin;
 
@@ -36,15 +38,26 @@ class VBModel<T> {
   VBModel(this.items);
 }
 
-class GenericUser {
+class GenericUser extends Equatable {
   final String name;
   final String id;
   final int money;
 
-  GenericUser(this.name, this.id, this.money);
+  const GenericUser(this.name, this.id, this.money);
+
+  bool findUserName(String name) {
+    return this.name == name;
+  }
+
+  @override
+  String toString() => 'GenericUser(name: $name, id: $id, money: $money)';
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [id];
 }
 
 class AdminUser extends GenericUser {
   final int role;
-  AdminUser(String name, String id, int money, this.role) : super(name, id, money);
+  const AdminUser(String name, String id, int money, this.role) : super(name, id, money);
 }

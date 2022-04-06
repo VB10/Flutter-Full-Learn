@@ -31,9 +31,11 @@ dependencies:
 
   #Core
   equatable: ^2.0.3
+  collection: any
 
   #Animation
   flutter_spinkit: ^5.1.0
+  lottie: ^1.2.2
 
   #States
   provider: ^6.0.2
@@ -63,6 +65,7 @@ flutter:
   assets:
     - assets/apple-and-book-png-transparent-apple-and-book-images-274565.png
     - assets/png/
+    - assets/lottie/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
