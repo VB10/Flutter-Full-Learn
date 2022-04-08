@@ -35,6 +35,10 @@
 	<string>I want use your camere for image uplad</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We need to</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>asdasd</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

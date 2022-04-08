@@ -29,14 +29,14 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>I want use your camere for image uplad</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>hllo</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>media</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>photo</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

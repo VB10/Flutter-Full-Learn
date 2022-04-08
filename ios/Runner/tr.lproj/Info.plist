@@ -22,6 +22,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>photo</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>https</string>
