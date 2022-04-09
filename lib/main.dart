@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/303/lottie_learn.dart';
-import 'package:flutter_full_learn/303/mobx_image_picker/view/mobx_image_upload_view.dart';
 import 'package:flutter_full_learn/product/constant/project_items.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifer.dart';
 import 'package:flutter_full_learn/product/navigator/navigator_custom.dart';
 import 'package:flutter_full_learn/product/navigator/navigator_manager.dart';
 import 'package:provider/provider.dart';
+
+import '303/package/kartal/kartal_view.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -68,7 +69,7 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       // routes: NavigatorRoures().items,
       onGenerateRoute: onGenerateRoute,
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-      home: const MobxImageUpload(),
+      home: const KartalView(),
     );
   }
 }

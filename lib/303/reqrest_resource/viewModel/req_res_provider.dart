@@ -21,11 +21,16 @@ class ReqResProvider extends ChangeNotifier {
 
   Future<void> _fetch() async {
     _changeLoading();
-    resources = (await reqresService.fetchResourceItem())?.data ?? [];
+    resources = await fetchItems();
     _changeLoading();
   }
 
-  void saveToLocale(ResourceContext resourceContext) {
+  Future<List<Data>> fetchItems() async {
+    return (await reqresService.fetchResourceItem())?.data ?? [];
+  }
+
+  bool? saveToLocale(ResourceContext resourceContext, List<Data> resources) {
     resourceContext.saveModel(ResourceModel(data: resources));
+    return resourceContext.model?.data?.isNotEmpty;
   }
 }
