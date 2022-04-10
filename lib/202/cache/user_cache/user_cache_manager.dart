@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_full_learn/202/cache/shared_manager.dart';
+import '../shared_manager.dart';
 
 import '../user_model.dart';
 

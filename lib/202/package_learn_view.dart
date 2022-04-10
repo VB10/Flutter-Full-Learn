@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/package/loading_bar.dart';
+import 'package/loading_bar.dart';
 
 import 'package/launch_mixin.dart';
 

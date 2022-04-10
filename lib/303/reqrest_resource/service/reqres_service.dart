@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_full_learn/303/reqrest_resource/model/resoruce_model.dart';
+import '../model/resoruce_model.dart';
 
 abstract class IReqresService {
   IReqresService(this.dio);

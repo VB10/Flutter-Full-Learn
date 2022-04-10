@@ -2,7 +2,8 @@
 // in flutter_full_learn/test/req_res_test.dart.
 // Do not manually edit this file.
 
-import 'dart:ui' as _i6;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i7;
 
 import 'package:flutter_full_learn/303/reqrest_resource/model/resoruce_model.dart'
     as _i4;
@@ -10,7 +11,7 @@ import 'package:flutter_full_learn/303/reqrest_resource/service/reqres_service.d
     as _i2;
 import 'package:flutter_full_learn/303/reqrest_resource/viewModel/req_res_provider.dart'
     as _i3;
-import 'package:flutter_full_learn/product/global/resource_context.dart' as _i5;
+import 'package:flutter_full_learn/product/global/resource_context.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -58,17 +59,22 @@ class MockReqResProvider extends _i1.Mock implements _i3.ReqResProvider {
       (super.noSuchMethod(Invocation.getter(#hasListeners), returnValue: false)
           as bool);
   @override
+  _i5.Future<List<_i4.Data>> fetchItems() =>
+      (super.noSuchMethod(Invocation.method(#fetchItems, []),
+              returnValue: Future<List<_i4.Data>>.value(<_i4.Data>[]))
+          as _i5.Future<List<_i4.Data>>);
+  @override
   bool? saveToLocale(
-          _i5.ResourceContext? resourceContext, List<_i4.Data>? resources) =>
+          _i6.ResourceContext? resourceContext, List<_i4.Data>? resources) =>
       (super.noSuchMethod(
               Invocation.method(#saveToLocale, [resourceContext, resources]))
           as bool?);
   @override
-  void addListener(_i6.VoidCallback? listener) =>
+  void addListener(_i7.VoidCallback? listener) =>
       super.noSuchMethod(Invocation.method(#addListener, [listener]),
           returnValueForMissingStub: null);
   @override
-  void removeListener(_i6.VoidCallback? listener) =>
+  void removeListener(_i7.VoidCallback? listener) =>
       super.noSuchMethod(Invocation.method(#removeListener, [listener]),
           returnValueForMissingStub: null);
   @override

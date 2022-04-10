@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/product/counter_hello_button.dart';
-import 'package:flutter_full_learn/product/language/language_items.dart';
+import '../product/counter_hello_button.dart';
+import '../product/language/language_items.dart';
 
 class StatefullLearn extends StatefulWidget {
   const StatefullLearn({Key? key}) : super(key: key);

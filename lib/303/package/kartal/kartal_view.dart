@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/image_learn_202.dart';
+import '../../../202/image_learn_202.dart';
 import 'package:kartal/kartal.dart';
 
 typedef ImageLoader = void Function(String url);

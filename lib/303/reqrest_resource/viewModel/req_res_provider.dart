@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/product/global/resource_context.dart';
+import '../../../product/global/resource_context.dart';
 
 import '../model/resoruce_model.dart';
 import '../service/reqres_service.dart';

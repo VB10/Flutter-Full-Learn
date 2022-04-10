@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/101/list_view_learn.dart';
+import '../101/list_view_learn.dart';
 
 class SheetLearn extends StatefulWidget {
   const SheetLearn({Key? key}) : super(key: key);

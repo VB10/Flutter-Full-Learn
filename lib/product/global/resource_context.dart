@@ -1,4 +1,4 @@
-import 'package:flutter_full_learn/303/reqrest_resource/model/resoruce_model.dart';
+import '../../303/reqrest_resource/model/resoruce_model.dart';
 
 class ResourceContext {
   ResourceModel? model;

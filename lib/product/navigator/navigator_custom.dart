@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/navigator/navigate_home_detail_view.dart';
-import 'package:flutter_full_learn/303/navigator/navigate_home_view.dart';
-import 'package:flutter_full_learn/main.dart';
-import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
+import '../../303/navigator/navigate_home_detail_view.dart';
+import '../../303/navigator/navigate_home_view.dart';
+import '../../main.dart';
+import 'navigator_routes.dart';
 
 import '../../303/lottie_learn.dart';
 import '../../303/mobx_image_picker/view/mobx_image_upload_view.dart';

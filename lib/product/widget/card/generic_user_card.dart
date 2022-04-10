@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/generic_learn.dart';
+
+import '../../../303/generic_learn.dart';
 
 class GenericUserCard extends StatelessWidget {
   const GenericUserCard({Key? key, required this.model}) : super(key: key);

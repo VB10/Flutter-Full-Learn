@@ -1,7 +1,7 @@
-import 'package:flutter_full_learn/202/cache/shared_learn_cache.dart';
-import 'package:flutter_full_learn/303/reqrest_resource/model/resoruce_model.dart';
-import 'package:flutter_full_learn/303/reqrest_resource/service/reqres_service.dart';
-import 'package:flutter_full_learn/product/service/project_network_manager.dart';
+import '../../../202/cache/shared_learn_cache.dart';
+import '../model/resoruce_model.dart';
+import '../service/reqres_service.dart';
+import '../../../product/service/project_network_manager.dart';
 
 import '../../../product/service/project_dio.dart';
 import '../view/req_res_view.dart';

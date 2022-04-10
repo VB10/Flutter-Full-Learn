@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:provider/provider.dart';
+
+import '../product/global/resource_context.dart';
 
 class ImageLearn202 extends StatefulWidget {
   const ImageLearn202({Key? key}) : super(key: key);

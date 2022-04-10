@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
+import 'navigator_routes.dart';
 
 class NavigatorManager {
   NavigatorManager._();

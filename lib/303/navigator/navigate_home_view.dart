@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
+import '../../product/navigator/navigator_routes.dart';
 
 import '../../product/mixin/navigator_mixin.dart';
 

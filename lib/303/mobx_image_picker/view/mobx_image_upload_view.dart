@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/mobx_image_picker/viewModel/image_upload_view_model.dart';
-import 'package:flutter_full_learn/product/utility/image_upload.dart';
+import '../viewModel/image_upload_view_model.dart';
+import '../../../product/utility/image_upload.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:lottie/lottie.dart';
 

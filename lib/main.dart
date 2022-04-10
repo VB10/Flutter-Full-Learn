@@ -1,22 +1,27 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/lottie_learn.dart';
-import 'package:flutter_full_learn/product/constant/project_items.dart';
-import 'package:flutter_full_learn/product/global/resource_context.dart';
-import 'package:flutter_full_learn/product/global/theme_notifer.dart';
-import 'package:flutter_full_learn/product/navigator/navigator_custom.dart';
-import 'package:flutter_full_learn/product/navigator/navigator_manager.dart';
+import '303/lottie_learn.dart';
+import 'product/constant/project_items.dart';
+import 'product/global/theme_notifer.dart';
+import 'product/inti/product_init.dart';
+import 'product/navigator/navigator_custom.dart';
+import 'product/navigator/navigator_manager.dart';
 import 'package:provider/provider.dart';
 
-import '303/package/kartal/kartal_view.dart';
+import '404/compute/compute_learn.dart';
 
-void main() {
-  runApp(MultiProvider(
-    providers: [
-      Provider(create: (_) => ResourceContext()),
-      ChangeNotifierProvider<ThemeNotifer>(create: (context) => ThemeNotifer())
-    ],
-    builder: (context, child) => const MyApp(),
-  )); //ALI DAYI
+Future<void> main() async {
+  final produtInit = ProductInit();
+  await produtInit.init();
+  runApp(
+    EasyLocalization(
+        supportedLocales: produtInit.localizationInit.supportedLocales,
+        path: produtInit.localizationInit.localizationPath, // <-- change the path of the translation files
+        child: MultiProvider(
+          providers: produtInit.providers,
+          builder: (context, child) => const MyApp(),
+        )),
+  );
 }
 
 class MyApp extends StatelessWidget with NavigatorCustom {
@@ -29,6 +34,13 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       title: ProjectItems.projectName,
       debugShowCheckedModeBanner: false,
       theme: context.watch<ThemeNotifer>().currentTheme,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+
+      builder: (context, child) {
+        return MediaQuery(data: MediaQuery.of(context).copyWith(textScaleFactor: 1), child: child ?? const SizedBox());
+      },
 
       //  ThemeData.dark().copyWith(
       //     tabBarTheme: const TabBarTheme(
@@ -66,10 +78,13 @@ class MyApp extends StatelessWidget with NavigatorCustom {
           },
         );
       },
+      // builder: (context,widget){
+
+      // },
       // routes: NavigatorRoures().items,
       onGenerateRoute: onGenerateRoute,
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-      home: const KartalView(),
+      home: const ComputeLearnView(),
     );
   }
 }

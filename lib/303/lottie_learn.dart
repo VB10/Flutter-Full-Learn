@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/product/constant/duration_items.dart';
-import 'package:flutter_full_learn/product/constant/lottie_items.dart';
-import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
+import '../product/constant/duration_items.dart';
+import '../product/constant/lottie_items.dart';
+import '../product/navigator/navigator_routes.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
+import 'package:uikit/uikit.dart';
 
 import '../product/global/theme_notifer.dart';
 
@@ -49,17 +50,5 @@ class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin
       ),
       body: const LoadingLottie(),
     );
-  }
-}
-
-class LoadingLottie extends StatelessWidget {
-  const LoadingLottie({
-    Key? key,
-  }) : super(key: key);
-  final _loadingLottie = 'https://assets2.lottiefiles.com/datafiles/bEYvzB8QfV3EM9a/data.json';
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Lottie.network(_loadingLottie));
   }
 }

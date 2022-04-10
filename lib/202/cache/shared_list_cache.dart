@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/cache/shared_learn_cache.dart';
-import 'package:flutter_full_learn/202/cache/shared_manager.dart';
-import 'package:flutter_full_learn/202/cache/user_cache/user_cache_manager.dart';
-import 'package:flutter_full_learn/202/cache/user_model.dart';
+import 'shared_learn_cache.dart';
+import 'shared_manager.dart';
+import 'user_cache/user_cache_manager.dart';
+import 'user_model.dart';
 
 class SharedListCache extends StatefulWidget {
   const SharedListCache({Key? key}) : super(key: key);

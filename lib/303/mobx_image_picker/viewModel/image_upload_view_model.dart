@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_full_learn/303/mobx_image_picker/model/image_upload_response.dart';
-import 'package:flutter_full_learn/303/mobx_image_picker/service/image_upload_service.dart';
+import '../model/image_upload_response.dart';
+import '../service/image_upload_service.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobx/mobx.dart';
 part 'image_upload_view_model.g.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/101/icon_learn.dart';
-import 'package:flutter_full_learn/101/image_learn.dart';
-import 'package:flutter_full_learn/101/stack_learn.dart';
+import 'icon_learn.dart';
+import 'image_learn.dart';
+import 'stack_learn.dart';
 
 class PageViewLearn extends StatefulWidget {
   const PageViewLearn({Key? key}) : super(key: key);

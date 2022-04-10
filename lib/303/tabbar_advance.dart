@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/101/icon_learn.dart';
+import '../101/icon_learn.dart';
 
 import 'feed_view.dart';
 
