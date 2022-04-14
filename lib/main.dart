@@ -1,22 +1,46 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/theme/light_theme.dart';
+import '303/lottie_learn.dart';
+import 'product/constant/project_items.dart';
+import 'product/global/theme_notifer.dart';
+import 'product/inti/product_init.dart';
+import 'product/navigator/navigator_custom.dart';
+import 'product/navigator/navigator_manager.dart';
+import 'package:provider/provider.dart';
 
-import '202/cache/secure_context/secure_context_learn.dart';
+import '404/compute/compute_learn.dart';
 
-void main() {
-  runApp(const MyApp()); //ALI DAYI
+Future<void> main() async {
+  final produtInit = ProductInit();
+  await produtInit.init();
+  runApp(
+    EasyLocalization(
+        supportedLocales: produtInit.localizationInit.supportedLocales,
+        path: produtInit.localizationInit.localizationPath, // <-- change the path of the translation files
+        child: MultiProvider(
+          providers: produtInit.providers,
+          builder: (context, child) => const MyApp(),
+        )),
+  );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with NavigatorCustom {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: ProjectItems.projectName,
       debugShowCheckedModeBanner: false,
-      theme: LighTheme().theme,
+      theme: context.watch<ThemeNotifer>().currentTheme,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+
+      builder: (context, child) {
+        return MediaQuery(data: MediaQuery.of(context).copyWith(textScaleFactor: 1), child: child ?? const SizedBox());
+      },
 
       //  ThemeData.dark().copyWith(
       //     tabBarTheme: const TabBarTheme(
@@ -45,7 +69,22 @@ class MyApp extends StatelessWidget {
       //       backgroundColor: Colors.transparent,
       //       elevation: 0,
       //     )),
-      home: const ShareContextLearn(),
+
+      // initialRoute: '/',
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) {
+            return const LottieLearn();
+          },
+        );
+      },
+      // builder: (context,widget){
+
+      // },
+      // routes: NavigatorRoures().items,
+      onGenerateRoute: onGenerateRoute,
+      navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
+      home: const ComputeLearnView(),
     );
   }
 }
