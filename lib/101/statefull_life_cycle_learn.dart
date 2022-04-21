@@ -47,9 +47,9 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
 
   void _computeName() {
     if (_isOdd) {
-      _message += " Cift";
-    } else {
       _message += " Tek";
+    } else {
+      _message += " Çift";
     }
   }
 
