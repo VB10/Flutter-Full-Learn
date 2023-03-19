@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'resoruce_model.g.dart';
 
-String _fetchCustom(String data) {
+String _fetchCustom(String? data) {
   return 'aa';
 }
 
